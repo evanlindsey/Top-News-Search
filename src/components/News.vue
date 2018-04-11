@@ -44,7 +44,7 @@ const articleURL = "https://newsapi.org/v1/articles?source=";
 const apiKey = "&apiKey=e4320e9e570641a3bc9ef83c44170390";
 
 export default {
-  name: 'news',
+  name: "news",
   // class vars
   data() {
     return {
@@ -53,8 +53,8 @@ export default {
       articles: [[]],
       hidden: true,
       hasSearched: false,
-      term: "",
-    }
+      term: ""
+    };
   },
   // onload
   mounted() {
@@ -75,7 +75,7 @@ export default {
         // handle data
         .then(data => {
           // for each source
-          data.sources.forEach((source) => {
+          data.sources.forEach(source => {
             // add id/name to list
             results[0].push(source.id);
             results[1].push(source.name);
@@ -104,7 +104,7 @@ export default {
       results[1] = [];
       // for each chosen source
       var counter = 0;
-      this.selected.forEach((source) => {
+      this.selected.forEach(source => {
         // get top news articles
         fetch(articleURL + source + apiKey)
           // parse response as json
@@ -112,7 +112,7 @@ export default {
           // handle data
           .then(data => {
             // for each article
-            data.articles.forEach((article) => {
+            data.articles.forEach(article => {
               var title = article.title;
               var url = article.url;
               // if article title contains search term
@@ -130,7 +130,7 @@ export default {
       this.articles = results;
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -188,7 +188,6 @@ button {
   background-color: #fff;
   color: #2c3e50;
   border: 2px solid #2c3e50;
-  ;
 }
 
 .btn-search {
