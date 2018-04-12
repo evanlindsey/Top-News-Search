@@ -22,7 +22,7 @@ export default {
 
 <style>
 body {
-  background: #ffffff url("./assets/news.jpg") no-repeat center center fixed;
+  background: #ffffff url("//images.pexels.com/photos/261949/pexels-photo-261949.jpeg?w=1920&h=1440") no-repeat center center fixed;
   background-size: cover;
 }
 
